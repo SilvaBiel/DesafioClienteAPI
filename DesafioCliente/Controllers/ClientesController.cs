@@ -23,7 +23,7 @@ namespace DesafioCliente.Controllers
         public async Task<IActionResult> Index()
         {
             return _context.Clientes != null ?
-                        View(await _context.Clientes.ToListAsync()) :
+                        View(await _context.Clientes.ToListAsync()):
                         Problem("Entity set 'AppDbContext.Clientes'  is null.");
         }
 
